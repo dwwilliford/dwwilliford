@@ -1,0 +1,68 @@
+<html>
+<head>
+    <style>
+    #banner {
+        background-color: #f2f2f2;
+        padding: 20px;
+      }
+      
+      #logo {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      
+      #tagline {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+    </style>  
+<title> WEB-115 Final Project </title>
+</head>
+
+<body>
+    <div id="banner">
+        <div id="logo">Derek Williford<br>Web115-003</div>
+        <div id="tagline">Discover Your Perfect Mealplan</div>
+    </div>
+<form id = "myForm">
+
+    
+
+<input type = "text" id = "myInput" value = "Please enter your name." /><br>
+<input type = "text" id = "myInput" value = "Please enter your email" /><br><br>
+<input type = "text" id = "myInput" value = "Breakfast" />
+<input type = "text" id = "myInput" value = "Morning Snack" />
+<input type = "text" id = "myInput" value = "Lunch" />
+<input type = "text" id = "myInput" value = "Afternoon Snack" />
+<input type = "text" id = "myInput" value = "Dinner" />
+
+<label for ="Day"><br><br>Enter the day of the Week:<br></label>
+<select id="Day">
+  <option value="Sunday">Sunday</option>
+  <option value="Monday">Monday</option>
+  <option value="Tuesday">Tuesday</option>
+  <option value="Wednesday">Wednesday</option>
+  <option value="Thursday">Thursday</option>
+  <option value="Friday">Friday</option>
+  <option value="Saturday">Saturday</option>
+  <option value="Sunday">Sunday</option>
+  
+</select><br><br>
+<input type = "button" id = "myButton" value = "Generate Meal Plan">
+</form>
+<script>
+    document.getElementById("myButton").addEventListener('click',myWindow)
+    function myWindow()
+    {
+        visitorName = document.getElementById("myInput").value;
+        myText = ("<html>\n<head>\n<title>Welcome</title>\n</head>\n<body>\n");
+        myText += ("Hello " + visitorName + ", this page was created on-the-fly!");
+        myText += ("</body>\n</html>");
+    
+        flyWindow = window.open('about:blank','myPop','width=400,height=200,left=200,top=200');
+        flyWindow.document.write(myText);
+    }
+    </script>
+</body>
+</html>
