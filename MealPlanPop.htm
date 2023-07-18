@@ -29,40 +29,67 @@
 
     
 
-<input type = "text" id = "myInput" value = "Please enter your name." /><br>
-<input type = "text" id = "myInput" value = "Please enter your email" /><br><br>
-<input type = "text" id = "myInput" value = "Breakfast" />
-<input type = "text" id = "myInput" value = "Morning Snack" />
-<input type = "text" id = "myInput" value = "Lunch" />
-<input type = "text" id = "myInput" value = "Afternoon Snack" />
-<input type = "text" id = "myInput" value = "Dinner" />
+<input type = "text" id = "user_name" value = "Please enter your name." /><br>
+<input type = "text" id = "email" value = "Please enter your email" /><br><br>
+<p>Goal for the Week</p>
+<input type = "text" id = "goal" value = "Please enter your Goal" /><br><br>
 
-<label for ="Day"><br><br>Enter the day of the Week:<br></label>
-<select id="Day">
-  <option value="Sunday">Sunday</option>
-  <option value="Monday">Monday</option>
-  <option value="Tuesday">Tuesday</option>
-  <option value="Wednesday">Wednesday</option>
-  <option value="Thursday">Thursday</option>
-  <option value="Friday">Friday</option>
-  <option value="Saturday">Saturday</option>
-  <option value="Sunday">Sunday</option>
+<p>Monday</p>
+<input type = "text" id = "Monday_Breakfast" value = "Breakfast" />
+<input type = "text" id = "Monday_MorningSnack" value = "Morning Snack" />
+<input type = "text" id = "Monday_Lunch" value = "Lunch" />
+<input type = "text" id = "Monday_AfternoonSnack" value = "Afternoon Snack" />
+<input type = "text" id = "Monday_Dinner" value = "Dinner" />
+
+<p>Tuesday</p>
+<input type = "text" id = "Tuesday_Breakfast" value = "Breakfast" />
+<input type = "text" id = "Tuesday_MorningSnack" value = "Morning Snack" />
+<input type = "text" id = "Tuesday_Lunch" value = "Lunch" />
+<input type = "text" id = "Tuesday_AfternoonSnack" value = "Afternoon Snack" />
+<input type = "text" id = "Tuesday_Dinner" value = "Dinner" />
+
+<p>Wednesday</p>
+<input type = "text" id = "Wednesday_Breakfast" value = "Breakfast" />
+<input type = "text" id = "Wednesday_MorningSnack" value = "Morning Snack" />
+<input type = "text" id = "Wednesday_Lunch" value = "Lunch" />
+<input type = "text" id = "Wednesday_AfternoonSnack" value = "Afternoon Snack" />
+<input type = "text" id = "Wednesday_Dinner" value = "Dinner" />
+
+<p>Thursday</p>
+<input type = "text" id = "Thursday_Breakfast" value = "Breakfast" />
+<input type = "text" id = "Thursday_MorningSnack" value = "Morning Snack" />
+<input type = "text" id = "Thursday_Lunch" value = "Lunch" />
+<input type = "text" id = "Thursday_AfternoonSnack" value = "Afternoon Snack" />
+<input type = "text" id = "Thursday_Dinner" value = "Dinner" />
+
+<p>Friday</p>
+<input type = "text" id = "Friday_Breakfast" value = "Breakfast" />
+<input type = "text" id = "Friday_MorningSnack" value = "Morning Snack" />
+<input type = "text" id = "Friday_Lunch" value = "Lunch" />
+<input type = "text" id = "Friday_AfternoonSnack" value = "Afternoon Snack" />
+<input type = "text" id = "Friday_Dinner" value = "Dinner" />
+
+<p>Saturday</p>
+<input type = "text" id = "Saturday_Breakfast" value = "Breakfast" />
+<input type = "text" id = "Saturday_MorningSnack" value = "Morning Snack" />
+<input type = "text" id = "Saturday_Lunch" value = "Lunch" />
+<input type = "text" id = "Saturday_AfternoonSnack" value = "Afternoon Snack" />
+<input type = "text" id = "Saturday_Dinner" value = "Dinner" />
+
+<p>Sunday</p>
+<input type = "text" id = "Sunday_Breakfast" value = "Breakfast" />
+<input type = "text" id = "Sunday_MorningSnack" value = "Morning Snack" />
+<input type = "text" id = "Sunday_Lunch" value = "Lunch" />
+<input type = "text" id = "Sunday_AfternoonSnack" value = "Afternoon Snack" />
+<input type = "text" id = "Sunday_Dinner" value = "Dinner" />
+  
   
 </select><br><br>
-<input type = "button" id = "myButton" value = "Generate Meal Plan">
+<input type = "button" id = "Meal_plan" value = "Generate Meal Plan">
+<input type = "button" id = "Print_plan" value = "Print Meal Plan">
+<input type = "button" id = "Download_plan" value = "Download Meal Plan">
+<input type = "button" id = "Clear_plan" value = "Clear Meal Plan">
 </form>
-<script>
-    document.getElementById("myButton").addEventListener('click',myWindow)
-    function myWindow()
-    {
-        visitorName = document.getElementById("myInput").value;
-        myText = ("<html>\n<head>\n<title>Welcome</title>\n</head>\n<body>\n");
-        myText += ("Hello " + visitorName + ", this page was created on-the-fly!");
-        myText += ("</body>\n</html>");
-    
-        flyWindow = window.open('about:blank','myPop','width=400,height=200,left=200,top=200');
-        flyWindow.document.write(myText);
-    }
-    </script>
+<script src="Mealplanjs.js"></script>
 </body>
 </html>
